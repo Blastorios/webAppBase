@@ -1,0 +1,93 @@
+#Credit to https://github.com/tiangolo/fastapi/tree/master/docs/en
+
+#Doc Source: https://squidfunk.github.io/mkdocs-material/creating-your-site/
+site_name: MyWebApp
+site_description: MyWebApp. The best in the business
+site_url: https://127.0.0.1:8000/
+theme:
+  #https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+  name: material
+  palette:
+  - scheme: preference
+    primary: indigo
+    accent: light blue
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to light mode
+  - scheme: slate
+    primary: indigo
+    accent: blue
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Switch to dark mode
+  icon:
+    repo: fontawesome/brands/github-alt
+  logo: img/some.svg
+  favicon: img/favicon.png
+  language: en
+  
+repo_name: Blastorios/webAppBase
+repo_url: https://github.com/Blastorios/webAppBase
+edit_uri: ''
+#google_analytics:
+#- XX-000000000-0
+#- auto
+plugins:
+- search
+- markdownextradata:
+    data: data
+nav:
+- webAppBase: index.md
+# - Languages:
+#   - en: /
+- first_example.md
+- Examples - For Eveyone:
+  - example/first.md
+  - example/second.md
+  - example/third.md
+  - Nested Examples:
+    - examples/nested/nested_index.md
+
+markdown_extensions:
+- toc:
+    permalink: true
+- markdown.extensions.codehilite:
+    guess_lang: false
+- markdown_include.include:
+    base_path: docs
+- admonition
+- codehilite
+- extra
+
+#https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#superfences
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_div_format ''
+- pymdownx.tabbed
+extra:
+  social:
+  - icon: fontawesome/brands/github-alt
+    link: https://github.com/Blastorios
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/JCZwiggelaar
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/in/jordi-zwiggelaar-6678b416b/
+  - icon: fontawesome/brands/dev
+    link: https://dev.to/Blastorios
+  - icon: fontawesome/brands/medium
+    link: https://medium.com/@Blastorios
+  - icon: fontawesome/solid/globe
+    link: https://blastorios.dev
+
+#https://squidfunk.github.io/mkdocs-material/customization/#additional-css
+extra_css:
+- css/termynal.css
+- css/extra.css
+extra_javascript:
+- https://unpkg.com/mermaid@8.4.6/dist/mermaid.min.js
+- js/termynal.js
+- js/custom.js
+- js/chat.js
+- https://sidecar.gitter.im/dist/sidecar.v1.js

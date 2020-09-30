@@ -1,0 +1,5 @@
+articles:
+  english:
+    - link: https://localhost:8080/
+      title: The official hosted documentation (Quick Updates)
+      author: You
