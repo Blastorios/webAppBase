@@ -5,13 +5,16 @@ import uvicorn
 
 app = FastAPI()
 
+
 @app.get("/")
 async def read_root():
     return {"hello": 'World'}
 
+
 @app.get("/course/{course_id}")
 async def my_course(course_id: int):
     return {"course_id": course_id}
+
 
 @app.get("/values/")
 async def read_values(page: int = 0, limit: int = 0, skip: int = 1):
